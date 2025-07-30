@@ -1,0 +1,136 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 10px;
+  background: #f7f7f7;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 400px;
+  margin: 0 auto 20px auto;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #ccc;
+}
+input[type="text"], input[type="number"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+button, .btn {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button {
+  background-color: #007bff;
+  color: white;
+}
+.btn-editar {
+  background-color: #a4a4a4;
+  color: black;
+}
+.btn-excluir {
+  background-color: #dc3545;
+  color: white;
+}
+table {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 0 5px #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 15px;
+}
+th {
+  background-color: #007bff;
+  color: white;
+}
+.acoes {
+  display: flex;
+  gap: 5px;
+}
+@media (max-width: 420px) {
+  /* centraliza e ajusta form e table */
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  form, table {
+    margin: 0 auto;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* permite scroll horizontal na tabela */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* botoes que quebram linha e se ajustam */
+  .acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .acoes button {
+    flex: 1 1 48%;
+    min-width: 120px;
+    box-sizing: border-box;
+  }
+}
+
+input.edit-nome,
+input.edit-custo,
+input.edit-venda {
+  width: 90%;
+  padding: 6px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+}
+@media (max-width: 420px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px; /* pode ajustar o padding */
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+
+  form, table {
+    margin: 0 auto;
+    max-width: 90% !important; /* para garantir que fique 100% na tela */
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+}
